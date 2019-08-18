@@ -14,7 +14,7 @@ import com.deasmahaputra.mvparchitecture.R
 import com.deasmahaputra.mvparchitecture.base.di.AppComponent
 import com.deasmahaputra.mvparchitecture.common.LocaleHelper
 
-class BaseActivity : AppCompatActivity(){
+open class BaseActivity : AppCompatActivity(){
 
     lateinit var dialog : Dialog
 

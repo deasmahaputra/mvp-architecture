@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:shimmer="http://schemas.android.com/tools">
+
+    <!--<com.google.android.material.appbar.AppBarLayout-->
+            <!--android:id="@+id/app_bar_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+            <!--android:fitsSystemWindows="true"-->
+            <!--shimmer:ignore="MissingConstraints">-->
+
+        <!--<androidx.appcompat.widget.Toolbar-->
+                <!--android:id="@+id/toolbar"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="?actionBarSize"-->
+                <!--android:background="@color/white"-->
+                <!--android:theme="@style/ThemeOverlay.AppCompat.Light">-->
+
+        <!--</androidx.appcompat.widget.Toolbar>-->
+
+    <!--</com.google.android.material.appbar.AppBarLayout>-->
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerViewContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            shimmer:duration="800"
+            shimmer:ignore="MissingConstraints">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <include layout="@layout/item_shimmer" />
+
+            <include layout="@layout/item_shimmer" />
+
+            <include layout="@layout/item_shimmer" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/movieListRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                shimmer:ignore="MissingConstraints">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/movieListRv">
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
